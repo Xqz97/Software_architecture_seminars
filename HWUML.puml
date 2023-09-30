@@ -1,36 +1,36 @@
 @startuml
-class Lesson4OOP.weapons.Sword {
+class HW.weapons.Sword {
 + int damage()
 + String toString()
 }
-class Lesson4OOP.warriors.Archer {
+class HW.warriors.Archer {
 + int distance()
 + String toString()
 }
-class Lesson4OOP.Seminar4OOP {
+class HW.Seminar4OOP {
 + {static} void main(String[])
 }
-interface Lesson4OOP.protect.Protection {
+interface HW.protect.Protection {
 ~ int protect()
 }
-class Lesson4OOP.warriors.Infantryman {
+class HW.warriors.Infantryman {
 + String toString()
 }
-class Lesson4OOP.weapons.Axe {
+class HW.weapons.Axe {
 + int damage()
 + String toString()
 }
-interface Lesson4OOP.weapons.Melee {
+interface HW.weapons.Melee {
 }
-class Lesson4OOP.protect.Armour {
+class HW.protect.Armour {
 + int protect()
 }
-class Lesson4OOP.weapons.Bow {
+class HW.weapons.Bow {
 + int distance()
 + int damage()
 + String toString()
 }
-class Lesson4OOP.Team {
+class HW.Team {
 - List<T> team
 + void add(T)
 + Iterator<T> iterator()
@@ -40,25 +40,25 @@ class Lesson4OOP.Team {
 + int getMinArmour()
 + String toString()
 }
-class Lesson4OOP.protect.Shield {
+class HW.protect.Shield {
 + int protect()
 + String toString()
 }
-interface Lesson4OOP.weapons.Weapon {
+interface HW.weapons.Weapon {
 ~ int damage()
 }
-interface Lesson4OOP.weapons.Ranged {
+interface HW.weapons.Ranged {
 ~ int distance()
 }
-class Lesson4OOP.Battle {
+class HW.Battle {
 - Warrior w1
 - Warrior w2
 + void fight()
 }
-class Lesson4OOP.protect.ChainMail {
+class HW.protect.ChainMail {
 + int protect()
 }
-abstract class Lesson4OOP.warriors.Warrior {
+abstract class HW.warriors.Warrior {
 - String name
 - int healthPoint
 - W weapon
@@ -75,23 +75,23 @@ abstract class Lesson4OOP.warriors.Warrior {
 + void reduceHealth(int)
 + String toString()
 }
-class Lesson4OOP.weapons.CrossBow {
+class HW.weapons.CrossBow {
 + int distance()
 + int damage()
 + String toString()
 }
 
 
-Lesson4OOP.weapons.Melee <|.. Lesson4OOP.weapons.Sword
-Lesson4OOP.warriors.Warrior <|-- Lesson4OOP.warriors.Archer
-Lesson4OOP.warriors.Warrior <|-- Lesson4OOP.warriors.Infantryman
-Lesson4OOP.weapons.Melee <|.. Lesson4OOP.weapons.Axe
-Lesson4OOP.weapons.Weapon <|-- Lesson4OOP.weapons.Melee
-Lesson4OOP.protect.Protection <|.. Lesson4OOP.protect.Armour
-Lesson4OOP.weapons.Ranged <|.. Lesson4OOP.weapons.Bow
-Lesson4OOP.Iterable <|.. Lesson4OOP.Team
-Lesson4OOP.protect.Protection <|.. Lesson4OOP.protect.Shield
-Lesson4OOP.weapons.Weapon <|-- Lesson4OOP.weapons.Ranged
-Lesson4OOP.protect.Protection <|.. Lesson4OOP.protect.ChainMail
-Lesson4OOP.weapons.Ranged <|.. Lesson4OOP.weapons.CrossBow
+HW.weapons.Melee <|.. HW.weapons.Sword
+HW.warriors.Warrior <|-- HW.warriors.Archer
+HW.warriors.Warrior <|-- HW.warriors.Infantryman
+HW.weapons.Melee <|.. HW.weapons.Axe
+HW.weapons.Weapon <|-- HW.weapons.Melee
+HW.protect.Protection <|.. HW.protect.Armour
+HW.weapons.Ranged <|.. HW.weapons.Bow
+HW.Iterable <|.. HW.Team
+HW.protect.Protection <|.. HW.protect.Shield
+HW.weapons.Weapon <|-- HW.weapons.Ranged
+HW.protect.Protection <|.. HW.protect.ChainMail
+HW.weapons.Ranged <|.. HW.weapons.CrossBow
 @enduml

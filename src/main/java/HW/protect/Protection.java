@@ -1,4 +1,4 @@
-package Lesson4OOP.protect;
+package HW.protect;
 
 public interface Protection {
     int protect();

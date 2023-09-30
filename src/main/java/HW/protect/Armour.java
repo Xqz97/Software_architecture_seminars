@@ -1,4 +1,4 @@
-package Lesson4OOP.protect;
+package HW.protect;
 
 public class Armour implements Protection{
     @Override

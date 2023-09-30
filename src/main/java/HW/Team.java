@@ -1,8 +1,8 @@
-package Lesson4OOP;
+package HW;
 
-import Lesson4OOP.protect.Protection;
-import Lesson4OOP.warriors.Archer;
-import Lesson4OOP.warriors.Warrior;
+import HW.protect.Protection;
+import HW.warriors.Archer;
+import HW.warriors.Warrior;
 
 import java.util.ArrayList;
 import java.util.Iterator;

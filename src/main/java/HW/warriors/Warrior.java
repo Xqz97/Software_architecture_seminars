@@ -1,7 +1,7 @@
-package Lesson4OOP.warriors;
+package HW.warriors;
 
-import Lesson4OOP.protect.Protection;
-import Lesson4OOP.weapons.Weapon;
+import HW.protect.Protection;
+import HW.weapons.Weapon;
 
 import java.util.Random;
 

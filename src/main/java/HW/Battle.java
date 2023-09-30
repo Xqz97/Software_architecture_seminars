@@ -1,6 +1,6 @@
-package Lesson4OOP;
+package HW;
 
-import Lesson4OOP.warriors.Warrior;
+import HW.warriors.Warrior;
 
 public class Battle{
     private Warrior w1;

@@ -1,4 +1,4 @@
-package Lesson4OOP.weapons;
+package HW.weapons;
 
 public class Axe implements Melee{
     @Override

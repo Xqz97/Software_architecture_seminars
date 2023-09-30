@@ -1,11 +1,15 @@
-package Lesson4OOP;
+package HW;
 
-import Lesson4OOP.protect.ChainMail;
-import Lesson4OOP.protect.Shield;
-import Lesson4OOP.warriors.Archer;
-import Lesson4OOP.warriors.Infantryman;
-import Lesson4OOP.warriors.Warrior;
-import Lesson4OOP.weapons.*;
+
+import HW.protect.ChainMail;
+import HW.protect.Shield;
+import HW.warriors.Archer;
+import HW.warriors.Infantryman;
+import HW.warriors.Warrior;
+import HW.weapons.Axe;
+import HW.weapons.Bow;
+import HW.weapons.CrossBow;
+import HW.weapons.Sword;
 
 public class Seminar4OOP {
     public static void main(String[] args) {

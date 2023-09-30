@@ -1,7 +1,7 @@
-package Lesson4OOP.warriors;
+package HW.warriors;
 
-import Lesson4OOP.protect.Protection;
-import Lesson4OOP.weapons.Ranged;
+import HW.protect.Protection;
+import HW.weapons.Ranged;
 
 public class Archer extends Warrior<Ranged, Protection>{
     public Archer(String name, int healthPoint, Ranged weapon, Protection shield) {

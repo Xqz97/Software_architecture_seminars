@@ -1,7 +1,7 @@
-package Lesson4OOP.warriors;
+package HW.warriors;
 
-import Lesson4OOP.protect.Protection;
-import Lesson4OOP.weapons.Melee;
+import HW.protect.Protection;
+import HW.weapons.Melee;
 
 public class Infantryman extends Warrior<Melee, Protection>{
     public Infantryman(String name, int healthPoint, Melee weapon, Protection shield) {
