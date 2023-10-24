@@ -1,0 +1,42 @@
+@startuml
+interface Seminar3.HW.CarInformation {
+~ String getModel()
+}
+class Seminar3.HW.SalesManager {
++ void printCarModel(CarInformation)
++ void printCarPrice(CarPricing)
+}
+class Seminar3.HW.VIPDiscount {
++ int applyDiscount(int)
+}
+class Seminar3.HW.StandartDiscount {
++ int applyDiscount(int)
+}
+interface Seminar3.HW.CarDiscount {
+~ int applyDiscount(int)
+}
+class Seminar3.HW.Car {
+- String model
+- int price
++ String getModel()
++ int getPrice()
++ String getPriceInfo()
+}
+class Seminar3.HW.DiscountedCar {
+- CarDiscount discountStrategy
++ String getPriceInfo()
+}
+class Seminar3.HW.Main {
++ {static} void main(String[])
+}
+interface Seminar3.HW.CarPricing {
+~ String getPriceInfo()
+}
+
+
+Seminar3.HW.CarDiscount <|.. Seminar3.HW.VIPDiscount
+Seminar3.HW.CarDiscount <|.. Seminar3.HW.StandartDiscount
+Seminar3.HW.CarInformation <|.. Seminar3.HW.Car
+Seminar3.HW.CarPricing <|.. Seminar3.HW.Car
+Seminar3.HW.Car <|-- Seminar3.HW.DiscountedCar
+@enduml
