@@ -1,0 +1,80 @@
+@startuml
+
+' Интерфейсы
+interface UserActions {
++authorize(username: String, password: String): boolean
++selectRoute(routeId: String, time: DateTime): boolean
++checkTicketAvailability(): boolean
++checkFunds(): boolean
+}
+
+interface TicketActions {
++reserveTicket(): boolean
++deductFunds(): boolean
++confirmPurchase(): boolean
++updateTicketAvailability(): void
++cancelReservation(): boolean
+}
+
+' Классы и операции
+' Класс, представляющий пользователя системы.
+class User implements UserActions {
+
+' Методы предусловия
++authorize(username: String, password: String): boolean
++selectRoute(routeId: String, time: DateTime): boolean
++checkTicketAvailability(): boolean
++checkFunds(): boolean
+
+' Методы постусловия
++reserveTicket(): boolean
++deductFunds(): boolean
++confirmPurchase(): boolean
++updateTicketAvailability(): void
++cancelReservation(): boolean
+}
+
+' Абстрактный класс и наследование
+
+abstract class Ticket implements TicketActions {
++routeId: String
++departureTime: DateTime
++price: Money
+}
+
+User --|> BusTicket : uses
+
+class BusTicket extends Ticket{
++routeId: String
++departureTime: DateTime
++price: Money
+}
+
+' Предусловия (должны быть выполнены перед выполнением операции)
+
+User --> User : authorize(username, password)
+User --> User : selectRoute(routeId, time)
+User --> User : checkTicketAvailability()
+User --> User : checkFunds()
+
+User --> BusTicket : reserveTicket()
+
+' Постусловия (должны быть выполнены после выполнения операции)
+
+User --> User : deductFunds()
+User --> User : confirmPurchase()
+User --> BusTicket : updateTicketAvailability()
+
+User --> User : cancelReservation()
+
+User --> User : [invariant] Funds >= BusTicket
+'Он гарантирует, что сумма средств на счете пользователя (Funds) не может быть отрицательной.
+'Это важно, чтобы предотвратить отрицательный баланс на счете пользователя.
+
+BusTicket --> [invariant] BusTicket : Price > 0
+'0- это инвариант для объекта BusTicket. Он гарантирует, что цена билета (Price) всегда больше нуля.
+'Это важно, чтобы предотвратить создание билетов с неправильной ценой.
+
+Ticket --> Ticket : [invariant] Price > 0
+
+@enduml
